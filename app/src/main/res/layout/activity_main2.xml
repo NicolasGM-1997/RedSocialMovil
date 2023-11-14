@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#444"
     tools:context=".MainActivity2">
 
     <TextView
         android:id="@+id/tituloRegistro"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Registro de nuevo usuario"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textColor="#fff"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -22,92 +24,142 @@
 
     <EditText
         android:id="@+id/userName"
-        android:layout_width="225dp"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:background="#DDD"
         android:ems="10"
-        android:hint="...Usuario"
+        android:hint="  ...Usuario"
         android:inputType="text"
+        android:textColor="#000"
+        android:textColorHint="#555"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231" />
+        app:layout_constraintVertical_bias="0.211" />
 
     <EditText
-        android:id="@+id/idUser"
-        android:layout_width="225dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/ciudad"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:background="#ddd"
         android:ems="10"
-        android:hint="...CC o NIT"
+        android:hint="  ...Ciudad"
         android:inputType="text"
+        android:textColor="#000"
+        android:textColorHint="#555"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.329" />
-
-    <EditText
-        android:id="@+id/direccion"
-        android:layout_width="225dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="...Direccion"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.422" />
-
-    <EditText
-        android:id="@+id/nombre"
-        android:layout_width="225dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="...Nombre Completo"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.518" />
 
     <EditText
-        android:id="@+id/fechaNacimiento"
-        android:layout_width="225dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/nombre"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:background="#ddd"
         android:ems="10"
-        android:hint="...Fecha Nacimiento"
-        android:inputType="date"
+        android:hint="  ...Nombre Completo"
+        android:inputType="text"
+        android:textColor="#000"
+        android:textColorHint="#555"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.616" />
+        app:layout_constraintVertical_bias="0.314" />
+
+    <EditText
+        android:id="@+id/fechaNacimiento"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:background="#ddd"
+        android:ems="10"
+        android:hint="  ...Fecha Nacimiento"
+        android:inputType="date"
+        android:textColor="#000"
+        android:textColorHint="#555"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.416" />
 
     <EditText
         android:id="@+id/passUser"
-        android:layout_width="225dp"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:background="#ddd"
         android:ems="10"
-        android:hint="...Contraseña"
+        android:hint="  ...Contraseña"
         android:inputType="textPassword"
+        android:textColor="#000"
+        android:textColorHint="#555"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.714" />
+        app:layout_constraintVertical_bias="0.618" />
 
     <Button
         android:id="@+id/registrarse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#396"
-        android:text="Registrarse"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:background="#53a"
+        android:text="REGISTRO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.733" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="#5ee"
+        android:backgroundTint="#5ee"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.158" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Ya tienes cuenta?. Inicia Sesion"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.828" />
+
+    <Button
+        android:id="@+id/inicioSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="#5ee"
+        android:backgroundTintMode="screen"
+        android:text="Iniciar Sesion"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.901" />
 </androidx.constraintlayout.widget.ConstraintLayout>
