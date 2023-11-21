@@ -1,18 +1,25 @@
 package com.example.redsocial;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity2 extends AppCompatActivity {
 
     private EditText userName, ciudad, nombre, fechaNacimiento, passUser;
     private Button registrarse;
-
+    private DatabaseReference data = FirebaseDatabase.getInstance().getReference();
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
@@ -24,15 +31,25 @@ public class MainActivity2 extends AppCompatActivity {
         registrarse = findViewById(R.id.registrarse);
         registrarse.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                String user,id,ciu,nom,fec,pass,mensaje;
-                user = userName.getText().toString();
-                ciu = ciudad.getText().toString();
-                nom = nombre.getText().toString();
-                fec = fechaNacimiento.getText().toString();
-                pass = passUser.getText().toString();
-                mensaje = "Usuario: "+user+"\nCiudad: "+ciu+"\nNombre: "+nom+"\nFecha de Nacimiento: "+fec+"\nContraseña: "+pass;
-                Toast toast = Toast.makeText(getApplicationContext(),mensaje, Toast.LENGTH_LONG);
-                toast.show();
+                String userText,nombreText,ciudadText,fechaText,passText;
+                String userId = data.child("usuarios").push().getKey();
+                userText = userName.getText().toString();
+                nombreText = nombre.getText().toString();
+                ciudadText = ciudad.getText().toString();
+                fechaText = fechaNacimiento.getText().toString();
+                passText = passUser.getText().toString();
+                Usuario newUser = new Usuario(userText,nombreText,ciudadText,fechaText,passText);
+                data.child("usuarios").child(userId).setValue(newUser).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override public void onSuccess(Void aVoid) {
+                        Toast.makeText(getApplicationContext(),"Datos enviados",Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(getApplicationContext(),MainActivity3.class);
+                        startActivity(intent);
+                    }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
+                        }
+                    });
             }
         });
     }

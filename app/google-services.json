@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1092113249643",
+    "firebase_url": "https://redmovil-dae06-default-rtdb.firebaseio.com",
+    "project_id": "redmovil-dae06",
+    "storage_bucket": "redmovil-dae06.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092113249643:android:40767c258d5d1a400a482e",
+        "android_client_info": {
+          "package_name": "com.example.redsocial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKo9uoyWvy4rtgeqE0PN7_btQ_yX4N2_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
