@@ -42,7 +42,7 @@ public class MainActivity2 extends AppCompatActivity {
                 data.child("usuarios").child(userId).setValue(newUser).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override public void onSuccess(Void aVoid) {
                         Toast.makeText(getApplicationContext(),"Datos enviados",Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(),MainActivity3.class);
+                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                         startActivity(intent);
                     }
                     }).addOnFailureListener(new OnFailureListener() {

@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void verificacion(String userValid, String passValid) {
         DatabaseReference validar = FirebaseDatabase.getInstance().getReference().child("usuarios");
-        validar.orderByChild("name").equalTo(userValid).addListenerForSingleValueEvent(new ValueEventListener() {
+        validar.orderByChild("user").equalTo(userValid).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     // Obtener el primer y único usuario
